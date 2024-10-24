@@ -36,10 +36,10 @@ void setup()
   display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(0,0);
-  int textWidth = 12; // Adjust this value based on your text size
-  int textHeight = 16; // Adjust this value based on your text size
-  int startX = (SCREEN_WIDTH - (textWidth * 6)); // Calculate starting X position
-  int startY = (SCREEN_HEIGHT - textHeight) / 2; // Calculate starting Y position
+  int textWidth = 12; //text size
+  int textHeight = 16; //text size
+  int startX = (SCREEN_WIDTH - (textWidth * 6)); //starting X position
+  int startY = (SCREEN_HEIGHT - textHeight) / 2; //starting Y position
 
   display.setCursor(2, startY);
   display.println("ACTIVATED");
@@ -106,7 +106,7 @@ void loop()
     Serial.println("AM");
   }
 
-  // Mirror the display manually
+  //Mirror the display
   for (int y = 0; y < SCREEN_HEIGHT; y++) {
     for (int x = 0; x < SCREEN_WIDTH / 2; x++) {
       uint16_t leftPixel = display.getPixel(x, y);
